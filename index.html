@@ -14,7 +14,7 @@
 
         header {
             background-color: #007acc;
-            color: white;
+            color: wheat;
             padding: 20px;
             text-align: center;
         }
@@ -43,6 +43,21 @@
         p {
             font-size: 16px;
             line-height: 1.6;
+        }
+
+        #image-container {
+            width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #rotate-image {
+            width: 100%;
+            display: block;
+            border-radius: 50%;
+            transition: transform 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -127,5 +142,31 @@
             <p><strong>Product Database Application</strong> : This program was about tracking products and customers.</p> 
         </section>
     </div>
+
+
+    <div id="image-container">
+        <img id="rotate-image" src="indir.jpg" alt="" width="100%">
+        <p><strong>Me in Hacettepe University, Ankara/TURKEY</strong> </p>
+    </div>
+
+    <script>
+        const image = document.getElementById('rotate-image');
+        const container = document.getElementById('image-container');
+        let isRotating = false;
+
+        container.addEventListener('mouseenter', () => {
+            if (!isRotating) {
+                isRotating = true;
+                image.style.transform = 'scale(1.2) rotate(360deg)';
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            if (isRotating) {
+                isRotating = false;
+                image.style.transform = 'scale(1) rotate(0deg)';
+            }
+        });
+    </script>
 </body>
 </html>
