@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>askimm</title>
+    <style>
+        body, html {
+            height: 100%;
+            background-color: red;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function hideButton() {
+            document.getElementById('button1').style.display = 'none';
+        }
+
+        function yesButton(){
+          alert("Ben de oyle dusunmustum (:");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Yüzüme Oturur Musun?</h1>
+        <button id="button1" onclick="hideButton()">Hayır</button>
+        <button id="button2" onclick="yesButton()">Evet</button>
+    </div>
+</body>
+</html>
